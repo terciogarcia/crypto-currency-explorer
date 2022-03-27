@@ -4,8 +4,7 @@ import styled from 'styled-components';
 export const CoinCard = styled(Card)`
   width: 300px;
   margin-right: 1rem;
-  margin-bottom: 2rem;
-  display: inline-block;
+  margin-bottom: 1rem;
   cursor: pointer;
 `;
 

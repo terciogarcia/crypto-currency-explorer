@@ -16,7 +16,6 @@ export const PageTitle = styled.div`
 export const PageContent = styled.section`
   padding: 2rem .5rem;
   margin: auto;
-  width: 100%;
   max-width: 1280px;
   display: flex;
   align-items: center;
