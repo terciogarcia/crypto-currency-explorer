@@ -6,7 +6,7 @@ test('Should get coin list', () => {
   const axiosSpy = jest.spyOn(axios, 'get');
 
   APIUtils.getCoinList();
-  expect(axiosSpy).toHaveBeenCalledWith(`${BASE_API_URL}/coins/markets`);
+  expect(axiosSpy).toHaveBeenCalledWith(`${BASE_API_URL}/coins/markets?vs_currency=usd`);
 });
 
 test('Should get coin details', () => {

@@ -34,12 +34,12 @@
             "error",
             "ignorePackages",
             { "ts": "never", "tsx": "never"}
-        ]
+        ],
+        "camelcase": "off"
     },
     "settings": {
         "import/resolver": {
             "typescript": {}
         }
     }
-        
 }

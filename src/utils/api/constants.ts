@@ -1,1 +1,2 @@
-export const BASE_API_URL = 'https://www.coingecko.com/en/api';
+export const BASE_API_URL = 'https://api.coingecko.com/api/v3';
+export const COMMOM_PARAMS = 'vs_currency=usd';
