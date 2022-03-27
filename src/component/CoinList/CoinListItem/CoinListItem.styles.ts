@@ -25,6 +25,7 @@ export const CoinImageContainer = styled.div`
 
 export const CoinImage = styled.img`
   width: 8rem;
+  border-radius: 8px;
   height: 8rem;
 `;
 
