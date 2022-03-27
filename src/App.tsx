@@ -1,19 +1,14 @@
-import { useEffect, useState } from 'react';
-import CoinList from './component/CoinList';
-import { Coin } from './interfaces/coin';
-import { getCoinList } from './utils/api';
+import { Routes, Route } from 'react-router-dom';
+import CoinDetails from './pages/CoinDetails';
+import Home from './pages/Home';
 
 function App() {
-  const [coins, setCoins] = useState<Coin[]>();
-
-  useEffect(() => {
-    getCoinList()
-      .then(setCoins);
-  }, []);
-
   return (
     <div className="App">
-      {coins && <CoinList coins={coins} />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/:coinId" element={<CoinDetails />} />
+      </Routes>
     </div>
   );
 }
