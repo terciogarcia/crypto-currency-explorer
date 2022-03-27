@@ -7,13 +7,13 @@ interface CoinListProps {
 
 function CoinList({ coins }: CoinListProps) {
   return (
-    <div>
+    <>
       {
         coins.map((coin) => (
           <CoinListItem key={coin.id} coin={coin} />
         ))
       }
-    </div>
+    </>
   );
 }
 
