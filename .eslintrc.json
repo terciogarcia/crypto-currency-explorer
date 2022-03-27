@@ -24,18 +24,29 @@
         "eslint-plugin-jsx-a11y"
     ],
     "rules": {
-        "react/react-in-jsx-scope": "off",
+        "camelcase": "off",
         "no-use-before-define": "off",
-        "@typescript-eslint/no-use-before-define": ["error"],
+        "no-restricted-exports": ["off", { "restrictedNamedExports": ["default"] }],
+        "react/react-in-jsx-scope": "off",
         "react/jsx-filename-extension": [ "warn", {"extensions": [".tsx"]} ],
-        "import/prefer-default-export": "off",
         "react/prop-types": "off",
+        "@typescript-eslint/no-use-before-define": ["error"],
+        "@typescript-eslint/member-delimiter-style": ["error", {
+            "multiline": {
+              "delimiter": "semi",
+              "requireLast": true
+            },
+            "singleline": {
+              "delimiter": "semi",
+              "requireLast": true
+            }
+        }],
+        "import/prefer-default-export": "off",
         "import/extensions": [
             "error",
             "ignorePackages",
             { "ts": "never", "tsx": "never"}
-        ],
-        "camelcase": "off"
+        ]
     },
     "settings": {
         "import/resolver": {
