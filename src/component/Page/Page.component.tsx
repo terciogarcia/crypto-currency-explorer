@@ -1,4 +1,6 @@
-import { PageContainer, PageHeader, PageContent } from './Page.styles';
+import {
+  PageContainer, PageHeader, PageContent, PageTitle,
+} from './Page.styles';
 
 interface PageProps {
     children: React.ReactNode;
@@ -7,7 +9,11 @@ interface PageProps {
 function Page({ children }: PageProps) {
   return (
     <PageContainer>
-      <PageHeader>Cryptocurrency Explorer</PageHeader>
+      <PageHeader>
+        <PageTitle>
+          Cryptocurrency Explorer
+        </PageTitle>
+      </PageHeader>
       <PageContent>
         {children}
       </PageContent>
