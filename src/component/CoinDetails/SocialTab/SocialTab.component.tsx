@@ -1,4 +1,3 @@
-import { Divider } from '@mui/material';
 import { useContext } from 'react';
 import DataRow from '../../DataRow';
 import { CoinDetailsContext } from '../CoinDetails.context';

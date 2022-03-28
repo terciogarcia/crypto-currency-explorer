@@ -1,1 +1,1 @@
-export { default } from './SocialTab.component';
+export { default } from './PricesTab.component';

@@ -10,6 +10,7 @@ import ContactTab from '../ContactTab';
 import SocialTab from '../SocialTab';
 import GithubTab from '../GithubTab';
 import ReputationTab from '../ReputationTab';
+import PricesTab from '../PricesTab';
 
 enum TabOption {
   contact,
@@ -29,6 +30,9 @@ function CoinDetailTabs() {
         value={tab}
         onChange={(_event, newValue) => setTab(newValue)}
         aria-label="Coin details tab"
+        variant="scrollable"
+        scrollButtons="auto"
+        allowScrollButtonsMobile
       >
         <Tab icon={<PhoneIcon />} label="Contact" />
         <Tab icon={<TwitterIcon />} label="Social" />
@@ -42,6 +46,7 @@ function CoinDetailTabs() {
       { tab === TabOption.social && <SocialTab /> }
       { tab === TabOption.github && <GithubTab /> }
       { tab === TabOption.reputation && <ReputationTab /> }
+      { tab === TabOption.prices && <PricesTab /> }
     </>
   );
 }
