@@ -1,8 +1,10 @@
-import { CircularProgress } from '@mui/material';
+import { Box, CircularProgress } from '@mui/material';
 
 function LoadingIndicator() {
   return (
-    <CircularProgress />
+    <Box>
+      <CircularProgress />
+    </Box>
   );
 }
 

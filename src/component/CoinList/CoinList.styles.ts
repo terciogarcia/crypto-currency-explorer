@@ -5,4 +5,5 @@ export const CoinGrid = styled.div`
   flex: 1;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 1rem;
 `;
