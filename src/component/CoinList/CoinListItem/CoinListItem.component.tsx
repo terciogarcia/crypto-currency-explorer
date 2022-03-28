@@ -1,12 +1,13 @@
 import { CardContent } from '@mui/material';
 import { useState } from 'react';
 import {
-  CoinInfo, CoinInfoText, CoinInfoTitle, CoinTitle, CoinImage, CoinCard, CoinImageContainer,
+  CoinTitle, CoinImage, CoinCard, CoinImageContainer,
 } from './CoinListItem.styles';
-import { Coin } from '../../../interfaces/coin';
+import { CoinSummary } from '../../../interfaces/CoinSummary';
+import DataRow from '../../DataRow';
 
 interface CoinListItemProps {
-  coin: Coin;
+  coin: CoinSummary;
 }
 
 function CoinListItem({ coin }: CoinListItemProps) {
@@ -28,27 +29,14 @@ function CoinListItem({ coin }: CoinListItemProps) {
 
         <CoinTitle>{`(${coin.symbol}) ${coin.name}`}</CoinTitle>
 
-        <CoinInfo>
-          <CoinInfoTitle>Current price</CoinInfoTitle>
-          <CoinInfoText>{`$${coin.current_price}`}</CoinInfoText>
-        </CoinInfo>
-
-        <CoinInfo>
-          <CoinInfoTitle>Highest price (24h)</CoinInfoTitle>
-          <CoinInfoText>{`$${coin.high_24h}`}</CoinInfoText>
-        </CoinInfo>
-
-        <CoinInfo>
-          <CoinInfoTitle>Lowest price (24h)</CoinInfoTitle>
-          <CoinInfoText>{`$${coin.low_24h}`}</CoinInfoText>
-        </CoinInfo>
-
-        <CoinInfo>
-          <CoinInfoTitle>Price variation (24h)</CoinInfoTitle>
-          <CoinInfoText color={coin.price_change_percentage_24h < 0 ? 'error.main' : 'success.main'}>
-            {`${coin.price_change_percentage_24h}%`}
-          </CoinInfoText>
-        </CoinInfo>
+        <DataRow title="Current price" text={`$${coin.current_price}`} />
+        <DataRow title="Highest price (24h)" text={`$${coin.high_24h}`} />
+        <DataRow title="Lowest price (24h)" text={`$${coin.low_24h}`} />
+        <DataRow
+          title="Price variation (24h)"
+          textColor={coin.price_change_percentage_24h < 0 ? 'error.main' : 'success.main'}
+          text={`${coin.price_change_percentage_24h}%`}
+        />
 
       </CardContent>
     </CoinCard>

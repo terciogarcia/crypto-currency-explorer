@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-import { Coin } from '../../interfaces/coin';
+import { CoinSummary } from '../../interfaces/CoinSummary';
 import { CoinGrid } from './CoinList.styles';
 import CoinListItem from './CoinListItem';
 
 interface CoinListProps {
-  coins: Coin[];
+  coins: CoinSummary[];
 }
 
 function CoinList({ coins }: CoinListProps) {
@@ -12,7 +12,7 @@ function CoinList({ coins }: CoinListProps) {
     <CoinGrid>
       {
         coins.map((coin) => (
-          <Link to={coin.id} key={coin.id}>
+          <Link role="button" to={coin.id} key={coin.id}>
             <CoinListItem coin={coin} />
           </Link>
         ))

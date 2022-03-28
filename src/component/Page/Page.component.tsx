@@ -1,5 +1,6 @@
+import CssBaseline from '@mui/material/CssBaseline';
 import {
-  PageContainer, PageHeader, PageContent, PageTitle,
+  PageContainer, PageHeader, PageContent, HomeLink,
 } from './Page.styles';
 
 interface PageProps {
@@ -9,10 +10,11 @@ interface PageProps {
 function Page({ children }: PageProps) {
   return (
     <PageContainer>
+      <CssBaseline />
       <PageHeader>
-        <PageTitle>
+        <HomeLink to="/">
           Cryptocurrency Explorer
-        </PageTitle>
+        </HomeLink>
       </PageHeader>
       <PageContent>
         {children}

@@ -27,15 +27,3 @@ export const CoinImage = styled.img`
   border-radius: 8px;
   height: 8rem;
 `;
-
-export const CoinInfo = styled.div``;
-
-export const CoinInfoTitle = styled(Typography).attrs({
-  variant: 'body2', color: 'text.secondary', component: 'span',
-})`
-  font-weight: 600;
-  margin-right: .5rem;
-`;
-
-export const CoinInfoText = styled(Typography).attrs({ variant: 'body2', component: 'span' })``;
-CoinInfoText.defaultProps = { color: 'text.secondary' };

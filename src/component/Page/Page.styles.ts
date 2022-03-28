@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import AppBar from '@mui/material/AppBar';
+import { Link } from 'react-router-dom';
 
 export const PageContainer = styled.div``;
 
@@ -8,7 +9,8 @@ export const PageHeader = styled(AppBar)`
   position: relative;
 `;
 
-export const PageTitle = styled.div`
+export const HomeLink = styled(Link)`
+  color: #fff;
   font-weight: 500;
   font-size: 1.4rem;
 `;

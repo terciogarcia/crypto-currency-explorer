@@ -26,11 +26,13 @@
     "rules": {
         "camelcase": "off",
         "no-use-before-define": "off",
+        "no-shadow": "off",
         "no-restricted-exports": ["off", { "restrictedNamedExports": ["default"] }],
         "react/react-in-jsx-scope": "off",
         "react/jsx-filename-extension": [ "warn", {"extensions": [".tsx"]} ],
         "react/prop-types": "off",
         "@typescript-eslint/no-use-before-define": ["error"],
+        "@typescript-eslint/no-shadow": "error",
         "@typescript-eslint/member-delimiter-style": ["error", {
             "multiline": {
               "delimiter": "semi",

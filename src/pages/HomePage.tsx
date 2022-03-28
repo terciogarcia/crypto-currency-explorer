@@ -2,11 +2,11 @@ import { Button } from '@mui/material';
 import { useEffect, useState } from 'react';
 import CoinList from '../component/CoinList';
 import LoadingIndicator from '../component/LoadingIndicator';
-import { Coin } from '../interfaces/coin';
+import { CoinSummary } from '../interfaces/CoinSummary';
 import { getCoinList } from '../utils/api';
 
-function Home() {
-  const [coins, setCoins] = useState<Coin[]>([]);
+function HomePage() {
+  const [coins, setCoins] = useState<CoinSummary[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -43,4 +43,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default HomePage;
