@@ -6,6 +6,7 @@ export const CoinDetailsImage = styled.img`
   height: 2rem;
   display: inline;
   margin-right: .6rem;
+  border-radius: 8px;
 `;
 
 export const CoinDetailsCard = styled(Card)`

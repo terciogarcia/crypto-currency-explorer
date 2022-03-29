@@ -10,12 +10,12 @@ export const PageHeader = styled(AppBar)`
 `;
 
 export const HomeLink = styled(Link)`
-  color: #fff;
+  color: #fff !important;
   font-weight: 500;
   font-size: 1.4rem;
 `;
 
-export const PageContent = styled.section`
+export const PageContent = styled.main`
   padding: 2rem .5rem;
   margin: auto;
   max-width: 1280px;

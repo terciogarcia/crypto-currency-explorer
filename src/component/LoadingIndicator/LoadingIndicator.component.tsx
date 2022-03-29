@@ -1,10 +1,11 @@
-import { Box, CircularProgress } from '@mui/material';
+import { CircularProgress } from '@mui/material';
+import { LoadingIndicatorContainer } from './LoadingIndicator.styles';
 
 function LoadingIndicator() {
   return (
-    <Box>
+    <LoadingIndicatorContainer>
       <CircularProgress />
-    </Box>
+    </LoadingIndicatorContainer>
   );
 }
 

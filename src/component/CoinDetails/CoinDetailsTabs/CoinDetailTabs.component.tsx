@@ -11,6 +11,7 @@ import SocialTab from '../SocialTab';
 import GithubTab from '../GithubTab';
 import ReputationTab from '../ReputationTab';
 import PricesTab from '../PricesTab';
+import ChartsTab from '../ChartsTab';
 
 enum TabOption {
   contact,
@@ -47,6 +48,7 @@ function CoinDetailTabs() {
       { tab === TabOption.github && <GithubTab /> }
       { tab === TabOption.reputation && <ReputationTab /> }
       { tab === TabOption.prices && <PricesTab /> }
+      { tab === TabOption.charts && <ChartsTab /> }
     </>
   );
 }

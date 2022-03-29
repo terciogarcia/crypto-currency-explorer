@@ -8,4 +8,5 @@ body {
 
 a, a:focus, a:hover, a:visited, a:link, a:active {
   text-decoration: none;
+  color: #1976D2;
 }
