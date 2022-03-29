@@ -3,13 +3,7 @@ import { Currency } from '../../../enums/Currency';
 import DataRow from '../../DataRow';
 import { CoinDetailsContext } from '../CoinDetails.context';
 import TabContent from '../TabContent';
-
-const formatDate = (date: string) => {
-  const splitDate = date.substring(0, 10).split('-');
-  return `${splitDate[1]}/${splitDate[2]}/${splitDate[0]}`;
-};
-
-const getValueColor = (value: number) => (value < 0 ? 'error.main' : 'success.main');
+import { getValueColor, formatDate } from './PriceTab.utils';
 
 function PricesTab() {
   const coin = useContext(CoinDetailsContext);

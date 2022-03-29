@@ -6,18 +6,12 @@ import { CoinChartData } from '../../interfaces/CoinChartData';
 import { getCoinChart } from '../../utils/api';
 import LoadingIndicator from '../LoadingIndicator';
 import { ChartContainer } from './CoinChart.styles';
+import { formatChartData } from './CoinChart.utils';
 
 interface CoinChartProps {
   coinId: string;
   days: number | 'max';
 }
-
-const formatDateTime = (integerDate: number) => {
-  const [date, time] = new Date(integerDate).toISOString().split('T');
-  const splitDate = date.split('-');
-
-  return `${splitDate[1]}/${splitDate[2]}/${splitDate[0]} ${time.substring(0, 5)}`;
-};
 
 function CoinChart({ coinId, days }: CoinChartProps) {
   const [coinChartData, setCoinChartData] = useState<CoinChartData>();
@@ -27,10 +21,10 @@ function CoinChart({ coinId, days }: CoinChartProps) {
       .then(setCoinChartData);
   }, [coinId, days]);
 
-  const formattedChartData = useMemo(() => coinChartData?.prices.map((price) => ({
-    date: formatDateTime(price[0]),
-    price: price[1],
-  })), [coinChartData]);
+  const formattedChartData = useMemo(
+    () => coinChartData && formatChartData(coinChartData.prices),
+    [coinChartData],
+  );
 
   if (!formattedChartData) {
     return (<LoadingIndicator />);

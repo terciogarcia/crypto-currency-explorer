@@ -1,4 +1,4 @@
-import { Box, Tabs, Tab } from '@mui/material';
+import { Tabs, Tab } from '@mui/material';
 import { useContext, useState } from 'react';
 import CoinChart from '../../CoinChart';
 import { CoinDetailsContext } from '../CoinDetails.context';

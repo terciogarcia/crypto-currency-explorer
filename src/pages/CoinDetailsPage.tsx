@@ -18,7 +18,7 @@ function CoinDetailsPage() {
 
   if (!coin) return <LoadingIndicator />;
 
-  return (<CoinDetails coin={coin} />);
+  return <CoinDetails coin={coin} />;
 }
 
 export default CoinDetailsPage;
