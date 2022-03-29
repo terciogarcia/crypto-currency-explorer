@@ -1,4 +1,6 @@
 # Crypto Currency Explorer
+[![Netlify Status](https://api.netlify.com/api/v1/badges/42e2a52e-8736-49c7-bcc3-b33c284676da/deploy-status)](https://app.netlify.com/sites/cryptocurrency-explorer/deploys)
+
 
 This project is a Web Application that display information about cryptocurrencies using the [Gecko Crypto API](https://www.coingecko.com/en/api).
 
