@@ -2,6 +2,8 @@
 
 This project is a Web Application that display information about cryptocurrencies using the [Gecko Crypto API](https://www.coingecko.com/en/api).
 
+Live application: https://cryptocurrency-explorer.netlify.app/
+
 ## Tools used
 
 - [Create React App](https://create-react-app.dev/) as boilerplate
