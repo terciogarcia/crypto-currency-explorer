@@ -11,6 +11,8 @@ Live application: https://cryptocurrency-explorer.netlify.app/
 - [Create React App](https://create-react-app.dev/) as boilerplate
 - [MUI](https://mui.com/) as styling framework
 - [Rechart](https://recharts.org/) to render graphics
+- [TypeScript](https://www.typescriptlang.org/)
+- [React Router](https://reactrouter.com/)
 
 ## Scripts
 
@@ -19,4 +21,7 @@ yarn // install dependencies
 yarn start // run the app for development on port 3000
 yarn build // builds app for production
 yarn test // run tests
+yarn eject // eject project from create-react-app
+yarn lint // check for lint errors
+yarn lint:fix // check for lint errors and automatically fix them when possiy
 ```
