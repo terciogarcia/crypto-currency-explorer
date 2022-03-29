@@ -38,7 +38,7 @@ function PricesTab() {
       {Boolean(highestPriceAllTime) && <DataRow title="Highest price (all-time)" text={`$${highestPriceAllTime}`} />}
       {Boolean(highestPriceAllTimeDate) && <DataRow title="Highest price all-time date" text={formatDate(highestPriceAllTimeDate)} />}
       {Boolean(lowestPriceAllTime) && <DataRow title="Lowest price (all-time)" text={`$${lowestPriceAllTime}`} />}
-      {Boolean(lowestPriceAllTimeDate) && <DataRow title="Lowest price all-time date" text={formatDate(highestPriceAllTimeDate)} />}
+      {Boolean(lowestPriceAllTimeDate) && <DataRow title="Lowest price all-time date" text={formatDate(lowestPriceAllTimeDate)} />}
     </TabContent>
   );
 }
