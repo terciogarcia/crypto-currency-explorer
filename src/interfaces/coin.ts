@@ -35,7 +35,7 @@ export interface Coin {
   tickers: Ticker[];
 }
 
-export interface Links {
+interface Links {
   homepage?: string[];
   blockchain_site?: string[];
   official_forum_url?: string[];
@@ -49,18 +49,18 @@ export interface Links {
   repos_url?: ReposUrl;
 }
 
-export interface ReposUrl {
+interface ReposUrl {
   github: string[];
   bitbucket: string[];
 }
 
-export interface Image {
+interface Image {
   thumb: string;
   small: string;
   large: string;
 }
 
-export interface MarketData {
+interface MarketData {
   current_price: Record<Currency, number>;
   total_value_locked: number;
   mcap_to_tvl_ratio: number;
@@ -105,7 +105,7 @@ export interface MarketData {
   last_updated: string;
 }
 
-export interface CommunityData {
+interface CommunityData {
   facebook_likes?: number;
   twitter_followers?: number;
   reddit_average_posts_48h?: number;
@@ -115,7 +115,7 @@ export interface CommunityData {
   telegram_channel_user_count?: number;
 }
 
-export interface DeveloperData {
+interface DeveloperData {
   forks?: number;
   stars?: number;
   subscribers?: number;
@@ -128,17 +128,17 @@ export interface DeveloperData {
   last_4_weeks_commit_activity_series?: number[];
 }
 
-export interface CodeAdditionsDeletions4Weeks {
+interface CodeAdditionsDeletions4Weeks {
   additions: number;
   deletions: number;
 }
 
-export interface PublicInterestStats {
+interface PublicInterestStats {
   alexa_rank: number;
   bing_matches: number;
 }
 
-export interface Ticker {
+interface Ticker {
   base: string;
   target: string;
   market: Market;
@@ -159,7 +159,7 @@ export interface Ticker {
   target_coin_id?: string;
 }
 
-export interface Market {
+interface Market {
   name: string;
   identifier: string;
   has_trading_incentive: boolean;

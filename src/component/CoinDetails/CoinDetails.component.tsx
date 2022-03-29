@@ -2,13 +2,13 @@ import { Button, CardActions, CardContent } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { Currency } from '../../enums/Currency';
 import { Languages } from '../../enums/Languages';
-import { Coin } from '../../interfaces/Coin';
 import DataRow from '../DataRow';
 import { CoinDetailsProvider } from './CoinDetails.context';
 import {
   CoinDetailsCard, CoinDetailsHeader, CoinDetailsImage, CoinDetailsTitle,
 } from './CoinDetails.styles';
 import CoinDetailTabs from './CoinDetailsTabs';
+import { Coin } from '../../interfaces/Coin';
 
 interface CoinDetailsProps {
   coin: Coin;
